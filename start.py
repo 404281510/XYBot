@@ -1,5 +1,7 @@
 import os
 import socket
+import sys
+import time
 
 import pynng
 import schedule
@@ -135,6 +137,27 @@ async def main():
             message = await recv_msg_async(sock, rsp)
             asyncio.create_task(handlebot.message_handler(bot, WxMsg(message))).add_done_callback(callback)
 
+async def main1():
+    time.sleep(2)
+    print("asasas")
+async def main2():
+    time.sleep(2)
+    print("11")
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    str = "huaqiliang"
+    i = 0
+    if i > 0:
+        print("hahahahah")
+    else:
+        print("wuwuwuwuwu")
+
+    # for j in sys.argv:
+    #     print(j)
+    # print(sys.path)
+    #
+    # print(str[1:3])
+    # asyncio.run(main())
+    # main1()
+    # print("sasas")
